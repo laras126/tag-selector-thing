@@ -1,0 +1,20 @@
+/* Copy and paste these styles into your main.css. You can then add new styles to them to change the corresponding HTML elements. Fun! */
+
+.tag-set {
+  border: 1px solid #ccc;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.tag {
+  border-radius: 5px;
+  background-color: #124055;
+  color: white;
+  padding: 1rem 1.5rem;
+  display: inline-block;
+  margin: 1rem;
+}
+
+.selected {
+  background-color: #AF3236;
+}
