@@ -63,7 +63,7 @@ Create a file called `script.js` in the same directory as your `index.html`. Pas
     });
 
 
-Next, add this code right above the closing `<body>` tag.
+Next, add this code right above the closing `</body>` tag on the HTML page where you would like to display the Tag Selector.
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="script.js"></script>
