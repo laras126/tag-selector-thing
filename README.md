@@ -2,9 +2,7 @@
 
 Use this small jQuery plugin to add a tag selecting UI to your static HTML page and to navigate to another static HTML page based on your selections. To use it:
 
-### Step 1: Smile!
-
-### Step 2: Add the HTML
+### Step 1: Add the HTML
 
 Paste this HTML where you would like the Tag Selector to go:
 
@@ -28,11 +26,49 @@ Paste this HTML where you would like the Tag Selector to go:
 
     </form>
 
-### Step 3: Add Your Content and Links
+
+### Step 2: Add Your Content and Links
 
 Change the content between the content in the tags to your desired tag names e.g. if you are searching restaurant cusines, change "Rum" to "Italian".
 
-Then, and **this is the most important part** change the text in the `data-name` attribute to an **ALL LOWERCASE** AND **NO SPACES** word indicating that tag name. For the above example, it would be `data-name="italian"`.
+Then, and **this is incredibly important**, change the text in the `data-name` attribute to an **ALL LOWERCASE** AND **NO SPACES** word indicating that tag name. For the above example, it would be `data-name="italian"`.
+
+
+### Step 3: Add the JavaScript
+
+Create a file called `script.js` in the same directory as your `index.html`. Paste this into your `script.js` file:
+
+    $(document).ready(function() {
+
+      $('.tag-set').each(function() {
+        $(this).find('.tag').click(function() {
+
+          $(this).parent('.tag-set')
+            .find('.tag')
+            .removeClass('selected');
+          $(this).addClass('selected');
+
+          var set1Selection = $('#set1').find('.selected').attr('data-link'),
+              set2Selection = $('#set2').find('.selected').attr('data-link');
+
+          var $tagForm = $('#tagForm'),
+              $tag1 = $('#tag1'),
+              $tag2 = $('#tag2');
+
+          $tagForm.attr('action', set1Selection + '-' + set2Selection + '.html');
+
+        });
+      });
+
+    });
+
+
+Next, add this code right above the closing `<body>` tag.
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+Nice!
 
 ### Step 4: Add the CSS
 
@@ -62,5 +98,22 @@ You can then style these as you wish! The `.tag` class corresponds to each tag, 
 
 ### Step 5: Create Your Other Files
 
-Create files corresponding to the names in the `data-link` attributes of each tag. This is the **second most important part**. In the example, if I am searching for a drink with the `data-link`s "rum" and "coupe", my file for that result will be `rum-coupe.html`.
+Create files corresponding to the names in the `data-link` attributes of each tag. This is also **incredibly important**.
+
+In the example, if I am searching for a drink with the `data-link`s "rum" and "coupe", my file for that result will be `rum-coupe.html`. The HTML files in my project might look like this:
+
+    project-folder
+      index.html
+      rum-coupe.html
+      gin-collins.html
+      rye-rocks.html
+      rum-rocks.html
+
+... etc.
+
+### Step 6: Smile!
+
+You did it! I hope!
+
+
 
