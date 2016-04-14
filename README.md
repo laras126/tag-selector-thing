@@ -38,24 +38,24 @@ Then, and **this is the most important part** change the text in the `data-name`
 
 Paste this into your primary CSS file (if you are in one of my classes, it is `main.css` in your `css` folder).
 
-  .tag-set {
-    border: 1px solid #ccc;
-    max-width: 400px;
-    margin: 0 auto;
+    .tag-set {
+      border: 1px solid #ccc;
+      max-width: 400px;
+      margin: 0 auto;
+      }
+
+    .tag {
+      border-radius: 5px;
+      background-color: #124055;
+      color: white;
+      padding: 1rem 1.5rem;
+      display: inline-block;
+      margin: 1rem;
     }
 
-  .tag {
-    border-radius: 5px;
-    background-color: #124055;
-    color: white;
-    padding: 1rem 1.5rem;
-    display: inline-block;
-    margin: 1rem;
-  }
-
-  .selected {
-    background-color: #AF3236;
-  }
+    .selected {
+      background-color: #AF3236;
+    }
 
 
 You can then style these as you wish! The `.tag` class corresponds to each tag, the `.tag-set` class to each set of tags, and the `.selected` class to the selected tag. Doh!
