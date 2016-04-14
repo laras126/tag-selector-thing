@@ -31,7 +31,7 @@ Paste this HTML where you would like the Tag Selector to go:
 
 Change the content between the content in the tags to your desired tag names e.g. if you are searching restaurant cusines, change "Rum" to "Italian".
 
-Then, and **this is incredibly important**, change the text in the `data-name` attribute to an **ALL LOWERCASE** AND **NO SPACES** word indicating that tag name. For the above example, it would be `data-name="italian"`.
+Then, and **this is incredibly important**, change the text in the `data-link` attribute to an **ALL LOWERCASE** AND **NO SPACES** word indicating that tag name. For the above example, it would be `data-link="italian"`.
 
 
 ### Step 3: Add the JavaScript
@@ -78,7 +78,7 @@ Paste this into your primary CSS file (if you are in one of my classes, it is `m
       border: 1px solid #ccc;
       max-width: 400px;
       margin: 0 auto;
-      }
+    }
 
     .tag {
       border-radius: 5px;
@@ -110,6 +110,8 @@ In the example, if I am searching for a drink with the `data-link`s "rum" and "c
       rum-rocks.html
 
 ... etc.
+
+If you aren't sure what the name of your file should be, you can check out [the demo on CodePen](http://codepen.io/laras126/pen/MyVvZg).
 
 ### Step 6: Smile!
 
