@@ -11,11 +11,11 @@ $(document).ready(function() {
       var set1Selection = $('#set1').find('.selected').attr('data-link'),
           set2Selection = $('#set2').find('.selected').attr('data-link');
 
-      var $submitBtn = $('#submit'),
+      var $tagForm = $('#tagForm'),
           $tag1 = $('#tag1'),
           $tag2 = $('#tag2');
 
-      $submitBtn.attr('href', set1Selection + '-' + set2Selection + '.html')
+      $tagForm.attr('action', set1Selection + '-' + set2Selection + '.html')
 
     });
   });
